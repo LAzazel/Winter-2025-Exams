@@ -3,11 +3,10 @@ Refactor following solution
 Return an array without duplicates
 """
 
-def duplicate(value, N):
-    if N <= 0:
-        return []
-    else:
+def duplicate(value, n):
+    if n:
         res = []
-        for i in range(N):
+        for i in range(n):
             res.append(value)
         return res
+    return []

@@ -5,8 +5,6 @@ Return an array without duplicates
 
 def duplicate(value, n):
     if n:
-        res = []
-        for i in range(n):
-            res.append(value)
+        res = [value] * n
         return res
     return []

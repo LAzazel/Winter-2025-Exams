@@ -1,5 +1,7 @@
-// Refactor following solution
-// Return an array without duplicates
+"""
+Refactor following solution
+Return an array without duplicates
+"""
 
 def duplicate(value, N):
     if N <= 0:

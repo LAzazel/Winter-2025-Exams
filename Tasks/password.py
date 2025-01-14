@@ -3,12 +3,11 @@ Refactor following solution
 Generate random password
 """
 
-import random
+from random import randrange
 
 def generate_password(alphabet, length):
     maximum = len(alphabet)
     key = ''
     for i in range(length):
-        index = random.randrange(0, maximum)
-        key += alphabet[index]
+        key += alphabet[randrange(0, maximum)]
     return key

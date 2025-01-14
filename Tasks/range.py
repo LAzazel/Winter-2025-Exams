@@ -9,5 +9,4 @@ def _range(from_value, to_value):
         for i in range(from_value, to_value + 1):
             res[i - from_value] = i
         return res
-    else:
-        return []
+    return []

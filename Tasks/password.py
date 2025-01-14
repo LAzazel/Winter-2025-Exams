@@ -3,11 +3,9 @@ Refactor following solution
 Generate random password
 """
 
-from random import randrange
+from random import choices
+
 
 def generate_password(alphabet, length):
-    maximum = len(alphabet)
-    key = ''
-    for i in range(length):
-        key += alphabet[randrange(0, maximum)]
-    return key
+    passw = choices(alphabet, k=length)
+    return ''.join(passw)

@@ -6,12 +6,9 @@ Make nested array plane
 def const_plane(arr):
     res = []
 
-    for i in range(len(arr)):
-        value = arr[i]
-        if isinstance(value, list):
-            res.extend(const_plane(value))
-            arr[i] = res[i - 1] if i > 0 else None
+    for i in arr:
+        if isinstance(i, list):
+            res.extend(const_plane(i))
         else:
-            arr[i] = res[i - 1] if i > 0 else None
-            res.append(value)
+            res.append(i)
     return res
